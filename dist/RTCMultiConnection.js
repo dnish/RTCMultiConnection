@@ -2177,7 +2177,8 @@ window.RTCMultiConnection = function(roomid, forceOptions) {
             }, false);
         }
 
-        var played = mediaElement.play();
+        //var played = mediaElement.play();
+        var played = undefined; // Prevent fullscreen on iOS
         if (typeof played !== 'undefined') {
             var cbFired = false;
             setTimeout(function() {
